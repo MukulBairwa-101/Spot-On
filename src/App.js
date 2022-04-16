@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() =>{
     fetchData();
-  },[])
+  })
   
 
   const fetchData = () =>{
