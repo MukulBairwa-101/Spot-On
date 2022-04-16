@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import Modal from 'react-modal';
 import {VscClose} from "react-icons/vsc"
 import Loader from "../Loader";
@@ -58,7 +58,7 @@ const Images = ({images}) => {
         <div className="images_wrapper">
             {
                 images.map((image)=>{
-                    return(<img src= {image.urls.thumb} onClick={()=>getImage(image.id)}  className="image" alt="image" key ={image.id} />)
+                    return(<img src= {image.urls.thumb} onClick={()=>getImage(image.id)}  className="image" alt="" key ={image.id} />)
                     
                 })
             }
