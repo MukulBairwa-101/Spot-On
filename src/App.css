@@ -107,10 +107,11 @@ nav,.user{
 /* loader */
 
 .lds-ellipsis {
-  display: inline-block;
+  display: flex;
   position: relative;
   width: 80px;
   height: 80px;
+  margin:40px auto ;
 }
 .lds-ellipsis div {
   position: absolute;

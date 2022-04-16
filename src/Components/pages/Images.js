@@ -50,7 +50,7 @@ const Images = ({images}) => {
       >
           <VscClose onClick={closeModal} className="close" />
           <div className="modal_image_wrapper">
-              {modalImage.length !== 0 ? <img src={modalImage[0].urls.regular} alt="image" className="one_image" /> :<Loader />}
+              {modalImage.length !== 0 ? <img src={modalImage[0].urls.regular} alt="" className="one_image" /> :<Loader />}
 
           </div>
       </Modal>
