@@ -9,8 +9,11 @@ import Navigation from "./Components/Navigation";
 function App() {
   const [images,setImages]= useState([]);
   
-  const {REACT_APP_API_ENDPOINT,REACT_APP_ACCESS_KEY } = process.env ;
+  // const {REACT_APP_API_ENDPOINT,REACT_APP_ACCESS_KEY } = process.env ;
 
+
+  const REACT_APP_API_ENDPOINT = 'https://api.unsplash.com/photos'
+  const REACT_APP_ACCESS_KEY = 'FpBZkv7zbNVoaZuB6PCpUAhLkhv5fWoTi7TiQfxJg0o'
 
   useEffect(() =>{
     fetchData();
@@ -18,7 +21,7 @@ function App() {
   
 
   const fetchData = () =>{
-    axios.get(`${REACT_APP_API_ENDPOINT}/random?client_id=${REACT_APP_ACCESS_KEY}&count=10`)
+    axios.get(`${REACT_APP_API_ENDPOINT}/random?client_id=${REACT_APP_ACCESS_KEY}&count=5`)
     .then(res=>setImages([...images,...res.data]))
   }
 
